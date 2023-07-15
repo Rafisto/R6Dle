@@ -1,0 +1,1005 @@
+{
+    "Sledge": {
+        "sex": "Male",
+        "continent": "Europe",
+        "release_year": 1,
+        "primary_options": [
+            "AR",
+            "Shotgun"
+        ],
+        "role": [
+            "Soft Breach"
+        ],
+        "speed": 1,
+        "gadgets": [
+            "Frag",
+            "Stun",
+            "Impact EMP"
+        ]
+    },
+    "Thatcher": {
+        "sex": "Male",
+        "continent": "Europe",
+        "release_year": 1,
+        "primary_options": [
+            "AR",
+            "Shotgun"
+        ],
+        "role": [
+            "Utility Clear"
+        ],
+        "speed": 1,
+        "gadgets": [
+            "Breach Charge",
+            "Claymore"
+        ]
+    },
+    "Ash": {
+        "sex": "Female",
+        "continent": "Asia",
+        "release_year": 1,
+        "primary_options": [
+            "AR"
+        ],
+        "role": [
+            "Entry Fragger",
+            "Soft Breach"
+        ],
+        "speed": 3,
+        "gadgets": [
+            "Claymore",
+            "Soft Breach"
+        ]
+    },
+    "Thermite": {
+        "sex": "Male",
+        "continent": "North America",
+        "release_year": 1,
+        "primary_options": [
+            "AR",
+            "Shotgun"
+        ],
+        "role": [
+            "Hard Breach"
+        ],
+        "speed": 2,
+        "gadgets": [
+            "Smoke",
+            "Flash"
+        ]
+    },
+    "Twitch": {
+        "sex": "Female",
+        "continent": "Europe",
+        "release_year": 1,
+        "primary_options": [
+            "AR",
+            "Marksman Rifle",
+            "Shotgun"
+        ],
+        "role": [
+            "Intel Gathering",
+            "Utility Clear"
+        ],
+        "speed": 2,
+        "gadgets": [
+            "Claymore",
+            "Smoke"
+        ]
+    },
+    "Montagne": {
+        "sex": "Male",
+        "continent": "Europe",
+        "release_year": 1,
+        "primary_options": [
+            "None"
+        ],
+        "role": [
+            "Intel Gatherer",
+            "Area Denial"
+        ],
+        "speed": 1,
+        "gadgets": [
+            "Smoke",
+            "Hard Breach",
+            "Impact EMP"
+        ]
+    },
+    "Glaz": {
+        "sex": "Male",
+        "continent": "Asia",
+        "release_year": 1,
+        "primary_options": [
+            "Marksman Rifle"
+        ],
+        "role": [
+            "Angle Watch",
+            "Entry Fragger"
+        ],
+        "speed": 2,
+        "gadgets": [
+            "Smoke",
+            "Frag",
+            "Claymore"
+        ]
+    },
+    "Fuze": {
+        "sex": "Male",
+        "continent": "Asia",
+        "release_year": 1,
+        "secondary_image": "",
+        "role": [
+            "Area Denial",
+            "Utility Clear"
+        ],
+        "speed": 1,
+        "gadgets": [
+            "Hard Breach",
+            "Soft Breach",
+            "Smoke"
+        ]
+    },
+    "Blitz": {
+        "sex": "Male",
+        "continent": "Europe",
+        "release_year": 1,
+        "secondary_image": "",
+        "role": [
+            "Entry Fragger"
+        ],
+        "speed": 2,
+        "gadgets": [
+            "Smoke",
+            "Soft Breach"
+        ]
+    },
+    "IQ": {
+        "sex": "Female",
+        "continent": "Europe",
+        "release_year": 1,
+        "secondary_image": "",
+        "role": [
+            "Utility Clear",
+            "Intel Gatherer"
+        ],
+        "speed": 3,
+        "gadgets": [
+            "Soft Breach",
+            "Claymore"
+        ]
+    },
+    "Buck": {
+        "sex": "Male",
+        "continent": "North America",
+        "release_year": 1,
+        "secondary_image": "",
+        "role": [
+            "Soft Breach"
+        ],
+        "speed": 2,
+        "gadgets": [
+            "Hard Breach",
+            "Flash"
+        ]
+    },
+    "Blackbeard": {
+        "sex": "Male",
+        "continent": "North America",
+        "release_year": 1,
+        "secondary_image": "",
+        "role": [
+            "Angle Watch"
+        ],
+        "speed": 2,
+        "gadgets": [
+            "Flash",
+            "Claymore",
+            "Impact EMP"
+        ]
+    },
+    "Capitao": {
+        "sex": "Male",
+        "continent": "South America",
+        "release_year": 1,
+        "secondary_image": "",
+        "role": [
+            "Area Denial"
+        ],
+        "speed": 3,
+        "gadgets": [
+            "Claymore",
+            "Hard Breach"
+        ]
+    },
+    "Hibana": {
+        "sex": "Female",
+        "continent": "Asia",
+        "release_year": 1,
+        "secondary_image": "",
+        "role": [
+            "Hard Breach"
+        ],
+        "speed": 3,
+        "gadgets": [
+            "Flash",
+            "Soft Breach"
+        ]
+    },
+    "Jackal": {
+        "sex": "Male",
+        "continent": "Europe",
+        "release_year": 2,
+        "secondary_image": "",
+        "role": [
+            "Intel Gatherer",
+            "Entry Fragger"
+        ],
+        "speed": 2,
+        "gadgets": [
+            "Claymore",
+            "Smoke"
+        ]
+    },
+    "Ying": {
+        "sex": "Female",
+        "continent": "Asia",
+        "release_year": 2,
+        "secondary_image": "",
+        "role": [
+            "Entry Fragger"
+        ],
+        "speed": 2,
+        "gadgets": [
+            "Smoke",
+            "Hard Breach"
+        ]
+    },
+    "Zofia": {
+        "sex": "Female",
+        "continent": "Europe",
+        "release_year": 2,
+        "secondary_image": "",
+        "role": [
+            "Entry Fragger",
+            "Soft Breach"
+        ],
+        "speed": 1,
+        "gadgets": [
+            "Claymore",
+            "Soft Breach"
+        ]
+    },
+    "Dokkaebi": {
+        "sex": "Female",
+        "continent": "Asia",
+        "release_year": 2,
+        "secondary_image": "",
+        "role": [
+            "Intel Gatherer"
+        ],
+        "speed": 3,
+        "gadgets": [
+            "Flash",
+            "Smoke",
+            "Impact EMP"
+        ]
+    },
+    "Lion": {
+        "sex": "Male",
+        "continent": "Europe",
+        "release_year": 3,
+        "secondary_image": "",
+        "role": [
+            "Intel Gatherer"
+        ],
+        "speed": 2,
+        "gadgets": [
+            "Flash",
+            "Claymore",
+            "Impact EMP"
+        ]
+    },
+    "Finka": {
+        "sex": "Female",
+        "continent": "Europe",
+        "release_year": 3,
+        "secondary_image": "",
+        "role": [
+            "Entry Fragger"
+        ],
+        "speed": 2,
+        "gadgets": [
+            "Smoke",
+            "Flash"
+        ]
+    },
+    "Maverick": {
+        "sex": "Male",
+        "continent": "North America",
+        "release_year": 3,
+        "secondary_image": "",
+        "role": [
+            "Hard Breach"
+        ],
+        "speed": 3,
+        "gadgets": [
+            "Flash",
+            "Claymore"
+        ]
+    },
+    "Nomad": {
+        "sex": "Female",
+        "continent": "Africa",
+        "release_year": 3,
+        "secondary_image": "",
+        "role": [
+            "Angle Watch",
+            "Area Denial"
+        ],
+        "speed": 2,
+        "gadgets": [
+            "Flash",
+            "Soft Breach"
+        ]
+    },
+    "Gridlock": {
+        "sex": "Female",
+        "continent": "Australia",
+        "release_year": 4,
+        "secondary_image": "",
+        "role": [
+            "Area Denial",
+            "Angle Watch"
+        ],
+        "speed": 1,
+        "gadgets": [
+            "Soft Breach",
+            "Smoke",
+            "Impact EMP"
+        ]
+    },
+    "Nokk": {
+        "sex": "Female",
+        "continent": "Europe",
+        "release_year": 4,
+        "secondary_image": "",
+        "role": [
+            "Entry Fragger"
+        ],
+        "speed": 2,
+        "gadgets": [
+            "Frag",
+            "Hard Breach",
+            "Impact EMP"
+        ]
+    },
+    "Amaru": {
+        "sex": "Female",
+        "continent": "South America",
+        "release_year": 4,
+        "secondary_image": "",
+        "role": [
+            "Entry Fragger"
+        ],
+        "speed": 2,
+        "gadgets": [
+            "Flash",
+            "Hard Breach"
+        ]
+    },
+    "Kali": {
+        "sex": "Female",
+        "continent": "Asia",
+        "release_year": 4,
+        "secondary_image": "",
+        "role": [
+            "Utility Clear",
+            "Angle Watch"
+        ],
+        "speed": 2,
+        "gadgets": [
+            "Claymore",
+            "Soft Breach"
+        ]
+    },
+    "Iana": {
+        "sex": "Female",
+        "continent": "Europe",
+        "release_year": 5,
+        "secondary_image": "",
+        "role": [
+            "Entry Fragger",
+            "Intel Gatherer"
+        ],
+        "speed": 2,
+        "gadgets": [
+            "Frag",
+            "Smoke"
+        ]
+    },
+    "Ace": {
+        "sex": "Male",
+        "continent": "Europe",
+        "release_year": 5,
+        "secondary_image": "",
+        "role": [
+            "hard Breach"
+        ],
+        "speed": 2,
+        "gadgets": [
+            "Claymore",
+            "Soft Breach"
+        ]
+    },
+    "Zero": {
+        "sex": "Male",
+        "continent": "North America",
+        "release_year": 5,
+        "secondary_image": "",
+        "role": [
+            "Intel Gatherer",
+            "Utility Clear"
+        ],
+        "speed": 3,
+        "gadgets": [
+            "Claymore",
+            "Hard Breach"
+        ]
+    },
+    "Flores": {
+        "sex": "Male",
+        "continent": "South America",
+        "release_year": 6,
+        "secondary_image": "",
+        "role": [
+            "Utility Clear",
+            "Soft Breach"
+        ],
+        "speed": 2,
+        "gadgets": [
+            "Claymore",
+            "Flash"
+        ]
+    },
+    "Osa": {
+        "sex": "Female",
+        "continent": "Europe",
+        "release_year": 6,
+        "secondary_image": "",
+        "role": [
+            "Angle Watch"
+        ],
+        "speed": 1,
+        "gadgets": [
+            "Claymore",
+            "Smoke",
+            "Impact EMP"
+        ]
+    },
+    "Sens": {
+        "sex": "Female",
+        "continent": "Europe",
+        "release_year": 7,
+        "secondary_image": "",
+        "role": [
+            "Area Denial",
+            "Angle Watch"
+        ],
+        "speed": 3,
+        "gadgets": [
+            "Hard Breach",
+            "Claymore"
+        ]
+    },
+    "Grim": {
+        "sex": "Male",
+        "continent": "Asia",
+        "release_year": 7,
+        "secondary_image": "",
+        "role": [
+            "Intel Gatherer",
+            "Angle Watch"
+        ],
+        "speed": 3,
+        "gadgets": [
+            "Claymore",
+            "Soft Breach"
+        ]
+    },
+    "Brava": {
+        "sex": "Female",
+        "continent": "South America",
+        "release_year": 8,
+        "secondary_image": "",
+        "role": [
+            "Utility Clear",
+            "Intel Gatherer"
+        ],
+        "speed": 3,
+        "gadgets": [
+            "Claymore",
+            "Smoke"
+        ]
+    },
+    "Smoke": {
+        "sex": "Male",
+        "continent": "Europe",
+        "release_year": 1,
+        "secondary_image": "",
+        "role": [
+            "Area Denial"
+        ],
+        "speed": 2,
+        "gadgets": [
+            "Deployable Shield",
+            "Barbed Wire"
+        ]
+    },
+    "Mute": {
+        "sex": "Male",
+        "continent": "Europe",
+        "release_year": 1,
+        "secondary_image": "",
+        "role": [
+            "Anti-Intel",
+            "Roamer",
+            "Breach Denial"
+        ],
+        "speed": 1,
+        "gadgets": [
+            "Bulletproof Cam",
+            "C4"
+        ]
+    },
+    "Castle": {
+        "sex": "Male",
+        "continent": "North America",
+        "release_year": 1,
+        "secondary_image": "",
+        "role": [
+            "Area Denial"
+        ],
+        "speed": 2,
+        "gadgets": [
+            "Bulletproof Cam",
+            "Proximity Alarm"
+        ]
+    },
+    "Pulse": {
+        "sex": "Male",
+        "continent": "North America",
+        "release_year": 1,
+        "secondary_image": "",
+        "role": [
+            "Roamer",
+            "Intel Gathering"
+        ],
+        "speed": 3,
+        "gadgets": [
+            "C4",
+            "Barbed Wire"
+        ]
+    },
+    "Doc": {
+        "sex": "Male",
+        "continent": "Europe",
+        "release_year": 1,
+        "secondary_image": "",
+        "role": [
+            "Support"
+        ],
+        "speed": 1,
+        "gadgets": [
+            "Barbed Wire",
+            "Bulletproof Cam"
+        ]
+    },
+    "Rook": {
+        "sex": "Male",
+        "continent": "Europe",
+        "release_year": 1,
+        "secondary_image": "",
+        "role": [
+            "Support"
+        ],
+        "speed": 1,
+        "gadgets": [
+            "Impacts",
+            "Proximity Alarm"
+        ]
+    },
+    "Kapkan": {
+        "sex": "Male",
+        "continent": "Asia",
+        "release_year": 1,
+        "secondary_image": "",
+        "role": [
+            "Trapper"
+        ],
+        "speed": 2,
+        "gadgets": [
+            "C4",
+            "Impacts"
+        ]
+    },
+    "Tachanka": {
+        "sex": "Male",
+        "continent": "Europe",
+        "release_year": 1,
+        "secondary_image": "",
+        "role": [
+            "Area Denial"
+        ],
+        "speed": 1,
+        "gadgets": [
+            "Barbed Wire",
+            "Deployable Shield"
+        ]
+    },
+    "Jager": {
+        "sex": "Male",
+        "continent": "Europe",
+        "release_year": 1,
+        "secondary_image": "",
+        "role": [
+            "Support",
+            "Roamer"
+        ],
+        "speed": 2,
+        "gadgets": [
+            "Barbed Wire",
+            "Bulletproof Cam"
+        ]
+    },
+    "Bandit": {
+        "sex": "Male",
+        "continent": "Europe",
+        "release_year": 1,
+        "secondary_image": "",
+        "role": [
+            "Breach Denial"
+        ],
+        "speed": 3,
+        "gadgets": [
+            "Barbed Wire",
+            "C4"
+        ]
+    },
+    "Frost": {
+        "sex": "Female",
+        "continent": "North America",
+        "release_year": 1,
+        "secondary_image": "",
+        "role": [
+            "Trapper"
+        ],
+        "speed": 2,
+        "gadgets": [
+            "Deployable Shield",
+            "Bulletproof Cam"
+        ]
+    },
+    "Valkyrie": {
+        "sex": "Female",
+        "continent": "North America",
+        "release_year": 1,
+        "secondary_image": "",
+        "role": [
+            "Intel Gatherer"
+        ],
+        "speed": 2,
+        "gadgets": [
+            "C4",
+            "Impacts"
+        ]
+    },
+    "Caveira": {
+        "sex": "Female",
+        "continent": "South America",
+        "release_year": 1,
+        "secondary_image": "",
+        "role": [
+            "Roamer",
+            "Intel Gatherer"
+        ],
+        "speed": 3,
+        "gadgets": [
+            "Impacts",
+            "Proximity Alarm"
+        ]
+    },
+    "Echo": {
+        "sex": "Male",
+        "continent": "Asia",
+        "release_year": 1,
+        "secondary_image": "",
+        "role": [
+            "Support",
+            "Intel Gatherer"
+        ],
+        "speed": 2,
+        "gadgets": [
+            "Impacts",
+            "Deployable Shield"
+        ]
+    },
+    "Mira": {
+        "sex": "Female",
+        "continent": "Europe",
+        "release_year": 2,
+        "secondary_image": "",
+        "role": [
+            "Support",
+            "Area Denial"
+        ],
+        "speed": 1,
+        "gadgets": [
+            "C4",
+            "Proximity Alarm"
+        ]
+    },
+    "Lesion": {
+        "sex": "Male",
+        "continent": "Asia",
+        "release_year": 2,
+        "secondary_image": "",
+        "role": [
+            "Trapper",
+            "Roamer"
+        ],
+        "speed": 2,
+        "gadgets": [
+            "Impacts",
+            "Bulletproof Cam"
+        ]
+    },
+    "Ela": {
+        "sex": "Female",
+        "continent": "Europe",
+        "release_year": 2,
+        "secondary_image": "",
+        "role": [
+            "Trapper",
+            "Roamer"
+        ],
+        "speed": 2,
+        "gadgets": [
+            "Barbed Wire",
+            "Deployable Shield"
+        ]
+    },
+    "Vigil": {
+        "sex": "Male",
+        "continent": "Asia",
+        "release_year": 2,
+        "secondary_image": "",
+        "role": [
+            "Roamer",
+            "Anti-Intel"
+        ],
+        "speed": 3,
+        "gadgets": [
+            "Impacts",
+            "Bulletproof Cam"
+        ]
+    },
+    "Maestro": {
+        "sex": "Male",
+        "continent": "Europe",
+        "release_year": 3,
+        "secondary_image": "",
+        "role": [
+            "Intel Gatherer"
+        ],
+        "speed": 1,
+        "gadgets": [
+            "Impacts",
+            "Barbed Wire"
+        ]
+    },
+    "Alibi": {
+        "sex": "Female",
+        "continent": "Africa",
+        "release_year": 3,
+        "secondary_image": "",
+        "role": [
+            "Intel Gatherer",
+            "Trapper"
+        ],
+        "speed": 3,
+        "gadgets": [
+            "Impacts",
+            "Deployable Shield"
+        ]
+    },
+    "Clash": {
+        "sex": "Female",
+        "continent": "Europe",
+        "release_year": 3,
+        "secondary_image": "",
+        "role": [
+            "Area Denial"
+        ],
+        "speed": 1,
+        "gadgets": [
+            "Barbed Wire",
+            "Impacts"
+        ]
+    },
+    "Kaid": {
+        "sex": "Male",
+        "continent": "Africa",
+        "release_year": 3,
+        "secondary_image": "",
+        "role": [
+            "Breach Denial"
+        ],
+        "speed": 1,
+        "gadgets": [
+            "Barbed Wire",
+            "C4"
+        ]
+    },
+    "Mozzie": {
+        "sex": "Male",
+        "continent": "Australia",
+        "release_year": 4,
+        "secondary_image": "",
+        "role": [
+            "Anti-Intel",
+            "Intel Gatherer",
+            "Roamer"
+        ],
+        "speed": 2,
+        "gadgets": [
+            "C4",
+            "Barbed Wire"
+        ]
+    },
+    "Warden": {
+        "sex": "Male",
+        "continent": "North America",
+        "release_year": 4,
+        "secondary_image": "",
+        "role": [
+            "Intel Gatherer"
+        ],
+        "speed": 2,
+        "gadgets": [
+            "C4",
+            "Deployable Shield"
+        ]
+    },
+    "Goyo": {
+        "sex": "Male",
+        "continent": "North America",
+        "release_year": 4,
+        "secondary_image": "",
+        "role": [
+            "Area Denial",
+            "Trapper"
+        ],
+        "speed": 2,
+        "gadgets": [
+            "C4",
+            "Proximity Alarm"
+        ]
+    },
+    "Wamai": {
+        "sex": "Male",
+        "continent": "Africa",
+        "release_year": 4,
+        "secondary_image": "",
+        "role": [
+            "Support"
+        ],
+        "speed": 2,
+        "gadgets": [
+            "Proximity Alarm",
+            "Impacts"
+        ]
+    },
+    "Oryx": {
+        "sex": "Male",
+        "continent": "Asia",
+        "release_year": 5,
+        "secondary_image": "",
+        "role": [
+            "Roamer"
+        ],
+        "speed": 2,
+        "gadgets": [
+            "Proximity Alarm",
+            "Barbed Wire"
+        ]
+    },
+    "Melusi": {
+        "sex": "Female",
+        "continent": "Africa",
+        "release_year": 5,
+        "secondary_image": "",
+        "role": [
+            "Area Denial",
+            "Intel Gatherer"
+        ],
+        "speed": 1,
+        "gadgets": [
+            "Impacts",
+            "Bulletproof Cam"
+        ]
+    },
+    "Aruni": {
+        "sex": "Female",
+        "continent": "Asia",
+        "release_year": 5,
+        "secondary_image": "",
+        "role": [
+            "Area Denial",
+            "Support"
+        ],
+        "speed": 2,
+        "gadgets": [
+            "Bulletproof Cam",
+            "Barbed Wire"
+        ]
+    },
+    "Thunderbird": {
+        "sex": "Female",
+        "continent": "North America",
+        "release_year": 6,
+        "secondary_image": "",
+        "role": [
+            "Support"
+        ],
+        "speed": 2,
+        "gadgets": [
+            "Impacts",
+            "C4"
+        ]
+    },
+    "Thorn": {
+        "sex": "Female",
+        "continent": "Europe",
+        "release_year": 6,
+        "secondary_image": "",
+        "role": [
+            "Trapper"
+        ],
+        "speed": 2,
+        "gadgets": [
+            "Barbed Wire",
+            "Deployable Shield"
+        ]
+    },
+    "Azami": {
+        "sex": "Female",
+        "continent": "Asia",
+        "release_year": 7,
+        "secondary_image": "",
+        "role": [
+            "Support",
+            "Area Denial"
+        ],
+        "speed": 2,
+        "gadgets": [
+            "Impacts",
+            "Barbed Wire"
+        ]
+    },
+    "Solis": {
+        "sex": "Female",
+        "continent": "South America",
+        "release_year": 7,
+        "secondary_image": "",
+        "role": [
+            "Intel Gatherer",
+            "Roamer",
+            "Support"
+        ],
+        "speed": 2,
+        "gadgets": [
+            "Impacts",
+            "Bulletproof Cam"
+        ]
+    }
+}
