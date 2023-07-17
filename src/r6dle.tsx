@@ -4,10 +4,14 @@ import Guesses from "./guesses";
 import RightData from "./rightdata";
 import NameSelect from "./nameSelect";
 import Leaderboard from "./leaderboard";
+import UserStatsDisplay from "./userStatsDisplay";
+import { UserStats } from "./API/userStats";
 import { TokenSave } from "./API/tokenSave";
+import { PatchGuess } from "./API/patchOperator";
 import { DailyOperator } from "./API/dailyOperator";
 import { useEffect, useState } from "react";
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Switch, Typography } from "@mui/material";
+import { setPlayDailyCookie, getPlayDailyCookie } from "./API/playDaily";
 
 type R6dleLocal = {
   op: string;
@@ -25,21 +29,35 @@ const R6dle = () => {
   const [token, setToken] = useState<string>("");
   const [dailySha, setDailySha] = useState<string>("");
 
-  const [playDaily] = useState<boolean>(true);
+  const [playDaily] = useState<boolean>(getPlayDailyCookie());
   const [dailyOperator, setDailyOperator] = useState<string>("");
+  const [userStats, setUserStats] = useState<{ [key: string]: string }>();
 
   useEffect(() => {
     const getToken = async () => {
       const tokenSave = await TokenSave();
       setToken(tokenSave.status == "success" ? tokenSave.token : "");
+      if (tokenSave.status == "success") {
+        const dailyOperator = await DailyOperator(
+          tokenSave.status == "success" ? tokenSave.token : ""
+        );
+        setDailyOperator(
+          dailyOperator.status == "success" ? dailyOperator.data : ""
+        );
+        setDailySha(dailyOperator.status == "success" ? dailyOperator.sha : "");
 
-      const dailyOperator = await DailyOperator(
-        tokenSave.status == "success" ? tokenSave.token : ""
-      );
-      setDailyOperator(
-        dailyOperator.status == "success" ? dailyOperator.data : ""
-      );
-      setDailySha(dailyOperator.status == "success" ? dailyOperator.sha : "");
+        const userStats = await UserStats(tokenSave.token);
+        setUserStats(
+          userStats.status == "success"
+            ? (
+                userStats as {
+                  status: string;
+                  stats: { [key: string]: string };
+                }
+              ).stats
+            : {}
+        );
+      }
     };
 
     void getToken();
@@ -86,6 +104,10 @@ const R6dle = () => {
       if (opList.includes(name)) {
         currentState.input = !currentState.input;
         if (name === getCorrectOP()) {
+          if (playDaily) {
+            PatchGuess(token, (currentState.guesses.length + 1).toString());
+            setPlayDailyCookie();
+          }
           currentState.victory = true;
         }
         currentState.guesses = Array.from(
@@ -98,6 +120,10 @@ const R6dle = () => {
       currentState.input = !currentState.input;
       if (localState.correct) {
         if (localState.selectedOp === getCorrectOP()) {
+          if (playDaily) {
+            PatchGuess(token, (currentState.guesses.length + 1).toString());
+            setPlayDailyCookie();
+          }
           currentState.victory = true;
         }
         currentState.guesses = Array.from(
@@ -111,10 +137,30 @@ const R6dle = () => {
   return (
     <React.Fragment>
       <Leaderboard />
+      {userStats ? (
+        <UserStatsDisplay stats={userStats} />
+      ) : (
+        <Typography
+          variant="subtitle1"
+          sx={{ position: "absolute", top: "50px" }}
+        >
+          ... loading User Stats
+        </Typography>
+      )}
       <RightData text={["API Debug", `token:${token}`, `sha256:${dailySha}`]} />
       <Typography variant="h1">R6dle</Typography>
       <Typography variant="subtitle1">Guess the correct operator</Typography>
-      {/* {dailyOperator} */}
+      {playDaily ? (
+        <>
+          <Switch defaultChecked disabled />
+          Daily operator
+        </>
+      ) : (
+        <>
+          <Switch disabled />
+          Normal Game
+        </>
+      )}
       <Box sx={{ margin: "60px" }}>
         {!localState.victory ? (
           <>

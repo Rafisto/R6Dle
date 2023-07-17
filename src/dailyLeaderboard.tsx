@@ -1,6 +1,6 @@
 import ReactECharts from "echarts-for-react";
 import { DailyStats } from "./API/dailyStats";
-import { Box, Dialog, DialogTitle, Typography } from "@mui/material";
+import { Box, Dialog, DialogTitle, Divider, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 
 type DailyLeaderboardProps = {
@@ -63,6 +63,7 @@ const DailyLeaderboard = ({ handleClose, open }: DailyLeaderboardProps) => {
           <Typography>R6dle</Typography>
           Daily leaderboard for {new Date().toJSON().slice(0, 10)}
         </DialogTitle>
+        <Divider sx={{backgroundColor:"#6f00f7",marginBottom:"10px"}}/>
         {leaderboard != undefined && (
           <ReactECharts
             option={LeaderboardBarOptions(
