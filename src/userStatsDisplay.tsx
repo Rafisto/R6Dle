@@ -1,4 +1,4 @@
-import { Dialog, Box, DialogTitle, Typography, Divider } from "@mui/material";
+import { Dialog, Box, DialogTitle, Typography, Divider, useMediaQuery } from "@mui/material";
 import { useState } from "react";
 import { LinkTypographyStyle } from "./leaderboard";
 
@@ -7,6 +7,8 @@ type UserStatsDisplayProps = {
 };
 
 const UserStatsDisplay = ({ stats }: UserStatsDisplayProps) => {
+  const mobile = useMediaQuery("(max-width:600px)");
+  const mobileSwitcher = (mobile) ? {cursor:"pointer"} : {...LinkTypographyStyle, position: "absolute", top:"50px" }
   const [open, setOpen] = useState<boolean>(false);
   const handleClose = () => {
     setOpen(!open);
@@ -15,7 +17,7 @@ const UserStatsDisplay = ({ stats }: UserStatsDisplayProps) => {
     <>
       <Typography
         variant="subtitle1"
-        sx={{ ...LinkTypographyStyle, position: "absolute", top: "50px" }}
+        sx={{ ...mobileSwitcher}}
         onClick={() => handleClose()}
       >
         &gt; User Stats

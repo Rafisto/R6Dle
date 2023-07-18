@@ -1,4 +1,4 @@
-import { Autocomplete, TextField } from "@mui/material";
+import { Autocomplete, TextField, useMediaQuery } from "@mui/material";
 
 type NameSelectProps = {
   opList: string[];
@@ -9,6 +9,7 @@ type NameSelectProps = {
 };
 
 const NameSelect = (props: NameSelectProps) => {
+  const mobile = useMediaQuery('(max-width:600px)');
   const onReturn = (e: React.KeyboardEvent<HTMLDivElement>) => {
     if (e.key === "Enter") {
       props.onReturn((e.target as HTMLTextAreaElement).value);
@@ -17,7 +18,6 @@ const NameSelect = (props: NameSelectProps) => {
   return (
     <Autocomplete
       key={props.reset ? "reset" : "not reset"}
-      freeSolo
       disableClearable
       options={props.opList.filter(
         (element) => !props.guessed.includes(element)
@@ -27,7 +27,7 @@ const NameSelect = (props: NameSelectProps) => {
       renderInput={(params) => (
         <TextField
           {...params}
-          sx={{ width: "20%" }}
+          sx={{ width: (mobile)?"100%":"20%" }}
           label="Choose an operator"
           InputProps={{
             ...params.InputProps,

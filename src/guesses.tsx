@@ -1,4 +1,8 @@
 import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Box,
   Paper,
   Table,
   TableBody,
@@ -6,9 +10,47 @@ import {
   TableContainer,
   TableHead,
   TableRow,
+  useMediaQuery,
 } from "@mui/material";
 import r6ops from "./r6ops.json";
 import CheckParameter from "./checkParameter";
+import { compareObjects } from "./compareObjects";
+
+type MobileGuessProps = {
+  guess: string;
+  correct: { [key: string]: string | string[] | number };
+  selectedop: { [key: string]: string | string[] | number };
+};
+
+const CheckedParams = ["sex", "continent", "release_year", "role", "speed", "gadgets"];
+
+const MobileGuess = ({ guess, correct, selectedop }: MobileGuessProps) => {
+  return (
+    <Accordion expanded={true} key={guess}>
+      <AccordionSummary>
+        {guess}
+        <Box flexGrow="1" />
+        {compareObjects(correct, selectedop,CheckedParams)}
+      </AccordionSummary>
+      <AccordionDetails>
+        <Box sx={{ textAlign: "left" }}>
+          {CheckedParams.map(
+            (parameter) => (
+              <div key={parameter}>
+                <CheckParameter
+                  parameter={parameter}
+                  correct={correct}
+                  check={selectedop}
+                  desc={parameter}
+                />
+              </div>
+            )
+          )}
+        </Box>
+      </AccordionDetails>
+    </Accordion>
+  );
+};
 
 type GuessesProps = {
   op: string;
@@ -17,7 +59,8 @@ type GuessesProps = {
 };
 
 const Guesses = (props: GuessesProps) => {
-  return (
+  const mobile = useMediaQuery("(max-width:600px)");
+  return !mobile ? (
     <TableContainer component={Paper} sx={{ width: "80%", margin: "auto" }}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead
@@ -108,6 +151,23 @@ const Guesses = (props: GuessesProps) => {
         </TableBody>
       </Table>
     </TableContainer>
+  ) : (
+    <>
+      {props.guesses
+        .map((_, index) => props.guesses[props.guesses.length - 1 - index])
+        .map((guess) => {
+          const selected_op = r6ops[guess as keyof typeof r6ops];
+          return (
+            <div key={guess} style={{marginBottom:"10px"}}>
+              <MobileGuess
+                guess={guess}
+                correct={props.correct}
+                selectedop={selected_op}
+              />
+            </div>
+          );
+        })}
+    </>
   );
 };
 

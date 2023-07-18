@@ -5,9 +5,10 @@ type CheckParameterProps = {
   parameter: string;
   correct: { [key: string]: string | string[] | number };
   check: { [key: string]: string | string[] | number };
+  desc?: string
 };
 
-const CheckParameter = ({ parameter, correct, check }: CheckParameterProps) => {
+const CheckParameter = ({ parameter, correct, check, desc }: CheckParameterProps) => {
   if (Array.isArray(check[parameter as keyof typeof check])) {
     let counter = 0;
     let color = "#d32f2f";
@@ -28,7 +29,7 @@ const CheckParameter = ({ parameter, correct, check }: CheckParameterProps) => {
 
     return (
       <Typography sx={{ color: color }}>
-        {(check[parameter as keyof typeof check] as string[]).join(", ")}
+        {(desc) ? desc + ":" : ""} {(check[parameter as keyof typeof check] as string[]).join(", ")}
       </Typography>
     );
   } else {
@@ -52,7 +53,7 @@ const CheckParameter = ({ parameter, correct, check }: CheckParameterProps) => {
             correct[parameter] === check[parameter] ? "#2e7d32" : "#d32f2f",
         }}
       >
-        <Typography>{check[parameter as keyof typeof check]}</Typography>
+        <Typography>{(desc) ? desc + ":" : ""} {check[parameter as keyof typeof check]}</Typography>
         {typeof correct[parameter] == "number" &&
           lower >= 0 &&
           (lower ? <ArrowDropDown /> : <ArrowDropUp />)}

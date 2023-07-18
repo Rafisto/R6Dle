@@ -10,8 +10,20 @@ import { TokenSave } from "./API/tokenSave";
 import { PatchGuess } from "./API/patchOperator";
 import { DailyOperator } from "./API/dailyOperator";
 import { useEffect, useState } from "react";
-import { Box, Button, Switch, Typography } from "@mui/material";
+import {
+  AppBar,
+  Box,
+  Button,
+  Drawer,
+  Fab,
+  Switch,
+  Toolbar,
+  Typography,
+  styled,
+  useMediaQuery,
+} from "@mui/material";
 import { setPlayDailyCookie, getPlayDailyCookie } from "./API/playDaily";
+import { Menu } from "@mui/icons-material";
 
 type R6dleLocal = {
   op: string;
@@ -24,6 +36,9 @@ type R6dleLocal = {
 };
 
 const R6dle = () => {
+  const mobile = useMediaQuery("(max-width:600px)");
+  const [mobileMenu, setMobileMenu] = useState<boolean>(false);
+
   const opList = Object.keys(r6ops);
 
   const [token, setToken] = useState<string>("");
@@ -134,21 +149,44 @@ const R6dle = () => {
     setLocalState(currentState);
   };
 
+  const StyledFab = styled(Fab)({
+    position: "absolute",
+    zIndex: 1,
+    top: -30,
+    left: 0,
+    right: 0,
+    margin: "0 auto",
+  });
+
+  const StatsMenu = () => {
+    return (
+      <>
+        <Leaderboard />
+        {userStats ? (
+          <UserStatsDisplay stats={userStats} />
+        ) : (
+          <Typography
+            variant="subtitle1"
+            sx={{ position: "absolute", top: "50px" }}
+          >
+            ... loading User Stats
+          </Typography>
+        )}
+      </>
+    );
+  };
+
   return (
     <React.Fragment>
-      <Leaderboard />
-      {userStats ? (
-        <UserStatsDisplay stats={userStats} />
-      ) : (
-        <Typography
-          variant="subtitle1"
-          sx={{ position: "absolute", top: "50px" }}
-        >
-          ... loading User Stats
-        </Typography>
+      {!mobile && (
+        <>
+          <StatsMenu />
+          <RightData
+            text={["API Debug", `token:${token}`, `sha256:${dailySha}`]}
+          />
+        </>
       )}
-      <RightData text={["API Debug", `token:${token}`, `sha256:${dailySha}`]} />
-      <Typography variant="h1">R6dle</Typography>
+      <Typography variant={(mobile)?"h3":"h1"}>R6dle</Typography>
       <Typography variant="subtitle1">Guess the correct operator</Typography>
       {playDaily ? (
         <>
@@ -161,7 +199,12 @@ const R6dle = () => {
           Normal Game
         </>
       )}
-      <Box sx={{ margin: "60px" }}>
+      <Box
+        sx={{
+          marginInline: mobile ? "5px" : "60px",
+          marginBlock: mobile ? "20px" : "60px",
+        }}
+      >
         {!localState.victory ? (
           <>
             <NameSelect
@@ -204,11 +247,11 @@ const R6dle = () => {
             <br />
             <Button
               variant="contained"
-              sx={{ margin: "15px", width: "10%" }}
+              sx={{ margin: "15px", width: (mobile)?"80%":"10%" }}
               color="success"
               onClick={restartPage}
             >
-              <Typography>One more game</Typography>
+              <Typography>One more game?</Typography>
             </Button>
           </>
         )}
@@ -218,6 +261,39 @@ const R6dle = () => {
         correct={r6ops[getCorrectOP() as keyof typeof r6ops]}
         op={getCorrectOP()}
       />
+      {mobile && (
+        <>
+          <AppBar
+            position="fixed"
+            color="primary"
+            sx={{ top: "auto", bottom: 0 }}
+          >
+            <Toolbar>
+              {/* <IconButton color="inherit" aria-label="open drawer">
+                <Menu onClick={() => setMobileMenu(!mobileMenu)} />
+              </IconButton> */}
+              <StyledFab color="secondary" aria-label="add">
+                <Menu onClick={() => setMobileMenu(!mobileMenu)} />
+                {/* <QuestionMark /> */}
+              </StyledFab>
+              {/* <Box sx={{ flexGrow: 1 }} />
+              <IconButton color="inherit">
+                <Info />
+              </IconButton> */}
+            </Toolbar>
+          </AppBar>
+          <Drawer
+            anchor="bottom"
+            open={mobileMenu}
+            onClose={() => setMobileMenu(!mobileMenu)}
+          >
+            <Box sx={{ paddingInline: "20px", paddingBlock: "10px" }}>
+              Menu:
+              <StatsMenu />
+            </Box>
+          </Drawer>
+        </>
+      )}
     </React.Fragment>
   );
 };

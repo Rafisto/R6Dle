@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Typography } from "@mui/material";
+import { Typography, useMediaQuery } from "@mui/material";
 import DailyLeaderboard from "./dailyLeaderboard";
 
 export const LinkTypographyStyle = {
@@ -8,6 +8,8 @@ export const LinkTypographyStyle = {
 };
 
 const Leaderboard = () => {
+  const mobile = useMediaQuery("(max-width:600px)");
+  const mobileSwitcher = (mobile) ? {cursor:"pointer"} : {...LinkTypographyStyle, position: "absolute", top:"20px" }
   const [open, setOpen] = useState<boolean>(false);
   const handleClose = () => {
     setOpen(!open);
@@ -17,7 +19,7 @@ const Leaderboard = () => {
       <DailyLeaderboard open={open} handleClose={handleClose} />
       <Typography
         variant="subtitle1"
-        sx={{ ...LinkTypographyStyle, position: "absolute", top:"20px" }}
+        sx={mobileSwitcher}
         onClick={() => handleClose()}
       >
         &gt; Leaderboard
