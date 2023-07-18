@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Typography, useMediaQuery } from "@mui/material";
+import { Box, Fab, Typography, useMediaQuery } from "@mui/material";
 import DailyLeaderboard from "./dailyLeaderboard";
+import { Leaderboard as LeaderboardIcon } from "@mui/icons-material";
 
 export const LinkTypographyStyle = {
   cursor: "pointer",
@@ -9,7 +10,6 @@ export const LinkTypographyStyle = {
 
 const Leaderboard = () => {
   const mobile = useMediaQuery("(max-width:600px)");
-  const mobileSwitcher = (mobile) ? {cursor:"pointer"} : {...LinkTypographyStyle, position: "absolute", top:"20px" }
   const [open, setOpen] = useState<boolean>(false);
   const handleClose = () => {
     setOpen(!open);
@@ -17,13 +17,34 @@ const Leaderboard = () => {
   return (
     <>
       <DailyLeaderboard open={open} handleClose={handleClose} />
-      <Typography
-        variant="subtitle1"
-        sx={mobileSwitcher}
-        onClick={() => handleClose()}
-      >
-        &gt; Leaderboard
-      </Typography>
+      {!mobile ? (
+        <>
+          <Typography
+            variant="subtitle1"
+            sx={{ ...LinkTypographyStyle, position: "absolute", top: "20px" }}
+            onClick={() => handleClose()}
+          >
+            &gt; Leaderboard
+          </Typography>
+        </>
+      ) : (
+        <Box>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              flexWrap: "wrap",
+              cursor: "pointer",
+            }}
+            onClick={() => handleClose()}
+          >
+            <Fab sx={{margin:"10px"}}>
+              <LeaderboardIcon />
+            </Fab>
+            Leaderboard
+          </div>
+        </Box>
+      )}
     </>
   );
 };

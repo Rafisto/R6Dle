@@ -23,7 +23,7 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import { setPlayDailyCookie, getPlayDailyCookie } from "./API/playDaily";
-import { Menu } from "@mui/icons-material";
+import { Close, Menu } from "@mui/icons-material";
 
 type R6dleLocal = {
   op: string;
@@ -186,7 +186,7 @@ const R6dle = () => {
           />
         </>
       )}
-      <Typography variant={(mobile)?"h3":"h1"}>R6dle</Typography>
+      <Typography variant={mobile ? "h3" : "h1"}>R6dle</Typography>
       <Typography variant="subtitle1">Guess the correct operator</Typography>
       {playDaily ? (
         <>
@@ -247,7 +247,7 @@ const R6dle = () => {
             <br />
             <Button
               variant="contained"
-              sx={{ margin: "15px", width: (mobile)?"80%":"10%" }}
+              sx={{ margin: "15px", width: mobile ? "80%" : "10%" }}
               color="success"
               onClick={restartPage}
             >
@@ -269,17 +269,9 @@ const R6dle = () => {
             sx={{ top: "auto", bottom: 0 }}
           >
             <Toolbar>
-              {/* <IconButton color="inherit" aria-label="open drawer">
-                <Menu onClick={() => setMobileMenu(!mobileMenu)} />
-              </IconButton> */}
               <StyledFab color="secondary" aria-label="add">
                 <Menu onClick={() => setMobileMenu(!mobileMenu)} />
-                {/* <QuestionMark /> */}
               </StyledFab>
-              {/* <Box sx={{ flexGrow: 1 }} />
-              <IconButton color="inherit">
-                <Info />
-              </IconButton> */}
             </Toolbar>
           </AppBar>
           <Drawer
@@ -287,8 +279,19 @@ const R6dle = () => {
             open={mobileMenu}
             onClose={() => setMobileMenu(!mobileMenu)}
           >
-            <Box sx={{ paddingInline: "20px", paddingBlock: "10px" }}>
-              Menu:
+            <div style={{ margin: "auto" }}>
+              <Fab sx={{ marginTop: "10px" }}>
+                <Close onClick={() => setMobileMenu(!mobileMenu)} />
+              </Fab>
+            </div>
+            <Box
+              sx={{
+                paddingInline: "20px",
+                paddingBlock: "10px",
+                fontSize: "20pt",
+              }}
+            >
+              <Typography sx={{ textAlign: "center", marginBottom:"20px" }}>Menu</Typography>
               <StatsMenu />
             </Box>
           </Drawer>

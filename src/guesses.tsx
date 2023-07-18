@@ -3,6 +3,7 @@ import {
   AccordionDetails,
   AccordionSummary,
   Box,
+  Divider,
   Paper,
   Table,
   TableBody,
@@ -15,6 +16,7 @@ import {
 import r6ops from "./r6ops.json";
 import CheckParameter from "./checkParameter";
 import { compareObjects } from "./compareObjects";
+import { useState } from "react";
 
 type MobileGuessProps = {
   guess: string;
@@ -25,13 +27,15 @@ type MobileGuessProps = {
 const CheckedParams = ["sex", "continent", "release_year", "role", "speed", "gadgets"];
 
 const MobileGuess = ({ guess, correct, selectedop }: MobileGuessProps) => {
+  const [expanded, setExpanded] = useState<boolean>(true);
   return (
-    <Accordion expanded={true} key={guess}>
+    <Accordion expanded={expanded} onChange={()=>setExpanded(!expanded)}  key={guess}>
       <AccordionSummary>
         {guess}
         <Box flexGrow="1" />
         {compareObjects(correct, selectedop,CheckedParams)}
       </AccordionSummary>
+      <Divider sx={{width:"90%", margin:"auto"}}/>
       <AccordionDetails>
         <Box sx={{ textAlign: "left" }}>
           {CheckedParams.map(
